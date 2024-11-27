@@ -1,0 +1,60 @@
+body{
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+    color: orangered;
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.cell{
+    background-color: antiquewhite;
+    border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    font-size: 8rem;
+}
+
+.cell:hover{
+    background-color: rgb(248, 187, 106);
+}
+
+#restartBtn{
+    color: orangered;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    border: 2px solid orange;
+    font-size: 1rem;
+}
+
+#restartBtn:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .cell{
+        width: 60px;
+        height: 60px;
+        font-size: 4rem;
+    }
+
+    #cellContainer{
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+}
